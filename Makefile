@@ -1,6 +1,6 @@
-GROUP=eavatartech
+GROUP=eavatar
 NAME=rabbitmq
-VERSION=3.4.2
+VERSION=3.4.4-1
 
 
 all: build tag
