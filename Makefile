@@ -9,7 +9,7 @@ build: Dockerfile overlayfs.tar
 	docker build --rm -t $(GROUP)/$(NAME):$(VERSION) .
 
 
-overlayfs.tar:
+overlayfs.tar: overlayfs/Dockerfile
 	cd overlayfs && docker build --rm -t $(NAME)-builder .
 	docker run --rm $(NAME)-builder cat /overlayfs.tar > overlayfs.tar
 	docker rmi $(NAME)-builder
